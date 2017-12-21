@@ -21,7 +21,10 @@
                     $(this).find("img").css({"width": "auto", "height": "100%"});
                 }
             } else {
-                $(this).find("img").css({"width": "auto", "height": "100%"});
+                if (ratioImg > 1 || ratioImg < 1.49) {
+                    $(this).find("img").css({"width": "100%", "height": "auto"});
+                } else
+                    $(this).find("img").css({"width": "auto", "height": "100%"});
             }
         });
     }
